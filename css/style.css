@@ -1,3 +1,139 @@
+body {
+  font-family: "Chakra Petch", sans-serif;
+  color: #263c55;
+  background-color: #00d2d3;
+}
 
+.container {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+.btn {
+  font-size: 35px;
+  font-family: "Cherry Bomb One", system-ui;
+  color: #1c2c3d;
+  margin: 20px;
+  border: none;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 5px 5px 10px #17c0eb;
+  text-transform: uppercase;
+}
+
+.instruction {
+  font-size: 25px;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  color: #263c55;
+}
+.instruction h1 {
+  font-size: 60px;
+  color: #ff9f43;
+  padding: 0;
+  margin: 10px;
+  text-shadow: 5px 5px #7d5fff;
+}
+.instruction h2 {
+  font-size: 40px;
+  padding: 0;
+  margin: 15px 0px 20px 0px;
+}
+.instruction ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.game {
+  padding: 0 20px;
+  border: 5px solid #17c0eb;
+  background-color: #67e6dc;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game h3 {
+  padding-top: 10px;
+  margin: 0;
+  font-size: 45px;
+}
+.game h4 {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+}
+
+.msg {
+  text-align: center;
+  height: 100px;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+span.rock {
+  font-weight: bold;
+  color: #7d5fff;
+  text-transform: uppercase;
+}
+
+span.paper {
+  font-weight: bold;
+  color: #32ff7e;
+  text-transform: uppercase;
+}
+
+span.scissors {
+  font-weight: bold;
+  color: #fffa65;
+  text-transform: uppercase;
+}
+
+.btn-rock {
+  background-color: #7d5fff;
+}
+
+.btn-paper {
+  background-color: #32ff7e;
+}
+
+.btn-scissors {
+  background-color: #fffa65;
+}
+
+.remis {
+  color: red;
+}
+
+.game-in {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.points {
+  border: 5px solid #17c0eb;
+  background-color: #82d1cb;
+  width: 150px;
+  height: 150px;
+  padding: 40px 30px 0px 30px;
+  font-size: 70px;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.buttons {
+  padding: 20px;
+  margin: 10px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFjQTtFQUNJLHVDQWRJO0VBZUosY0FYSztFQVlMLHlCQVhLO0FDRlQ7O0FEZ0JBO0VBQ0ksYUFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0FDYko7O0FEZUE7RUFDSSxlQUFBO0VBQ0EseUNBNUJVO0VBNkJWLGNBeEJLO0VBeUJMLFlBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxnQ0FBQTtFQUNBLHlCQUFBO0FDWko7O0FEY0E7RUFDSSxlQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxjQXZDSztBQzRCVDtBRGFJO0VBQ0ksZUFBQTtFQUNBLGNBNUNDO0VBNkNELFVBQUE7RUFDQSxZQUFBO0VBQ0EsNEJBQUE7QUNYUjtBRGNJO0VBQ0ksZUFBQTtFQUNBLFVBQUE7RUFDQSx5QkFBQTtBQ1pSO0FEZUk7RUFDSSxrQkFBQTtFQUNBLHFCQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUNiUjs7QURpQkE7RUFDSSxlQUFBO0VBQ0EseUJBQUE7RUFDQSx5QkE5RFM7RUErRFQsa0JBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0FDZEo7QURlSTtFQUNJLGlCQUFBO0VBQ0EsU0FBQTtFQUNBLGVBQUE7QUNiUjtBRGVJO0VBQ0ksVUFBQTtFQUNBLFNBQUE7RUFDQSxlQUFBO0FDYlI7O0FEZ0JBO0VBRUksa0JBQUE7RUFDQSxhQUFBO0VBQ0EsYUFBQTtFQUNBLGVBQUE7RUFDQSxpQkFBQTtBQ2RKOztBRGtCQTtFQUNJLGlCQUFBO0VBQ0EsY0F6RlM7RUEwRlQseUJBQUE7QUNmSjs7QURrQkE7RUFDSSxpQkFBQTtFQUNBLGNBOUZVO0VBK0ZWLHlCQUFBO0FDZko7O0FEa0JBO0VBQ0ksaUJBQUE7RUFDQSxjQW5HYTtFQW9HYix5QkFBQTtBQ2ZKOztBRGtCQTtFQUNJLHlCQTFHUztBQzJGYjs7QURpQkE7RUFDSSx5QkE1R1U7QUM4RmQ7O0FEZ0JBO0VBQ0kseUJBOUdhO0FDaUdqQjs7QURnQkE7RUFDSSxVQUFBO0FDYko7O0FEZ0JBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsOEJBQUE7RUFDQSxtQkFBQTtBQ2JKOztBRGdCQTtFQUNJLHlCQUFBO0VBQ0EseUJBaklTO0VBa0lULFlBQUE7RUFDQSxhQUFBO0VBQ0EsMkJBQUE7RUFDQSxlQUFBO0VBQ0EsZ0NBQUE7QUNiSjs7QURlQTtFQUNJLGFBQUE7RUFDQSxZQUFBO0FDWkoiLCJmaWxlIjoic3R5bGUuY3NzIn0= */

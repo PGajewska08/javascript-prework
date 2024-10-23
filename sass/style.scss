@@ -1,0 +1,150 @@
+//fonts
+$font1: "Chakra Petch", sans-serif;
+$font-button: "Cherry Bomb One", system-ui;;
+//colors
+$color1: #ff9f43;
+$color2: #263c55;
+$color3: #00d2d3;
+$color4: #1c2c3d;
+$color-frame: #17c0eb;
+$color-bg-2: #67e6dc;
+$color-bg-3: #82d1cb;
+$color-rock: #7d5fff;
+$color-paper: #32ff7e;
+$color-scissors: #fffa65;
+body {
+    font-family: $font1;
+    color: $color2;
+    background-color:$color3;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    font-size: 35px;
+    font-family: $font-button;
+    color: $color4;
+    margin: 20px;
+    border: none;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 5px 5px 10px $color-frame;
+    text-transform: uppercase;
+}
+.instruction {
+    font-size: 25px;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    color: $color2;
+
+    h1 {
+        font-size: 60px;
+        color: $color1;
+        padding: 0;
+        margin: 10px;
+        text-shadow: 5px 5px $color-rock;
+    }
+
+    h2 {
+        font-size: 40px;
+        padding: 0;
+        margin: 15px 0px 20px 0px;
+    }
+
+    ul {
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.game {
+    padding: 0 20px;
+    border: 5px solid $color-frame;
+    background-color: $color-bg-2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        padding-top: 10px;
+        margin: 0;
+        font-size: 45px;
+    }
+    h4 {
+        padding: 0;
+        margin: 0;
+        font-size: 30px;
+    }
+}
+.msg {
+    //margin-top: 20px;
+    text-align: center;
+    height: 100px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+span.rock {
+    font-weight: bold;
+    color: $color-rock;
+    text-transform: uppercase;
+}
+
+span.paper {
+    font-weight: bold;
+    color: $color-paper;
+    text-transform: uppercase;
+}
+
+span.scissors {
+    font-weight: bold;
+    color: $color-scissors;
+    text-transform: uppercase;
+}
+
+.btn-rock {
+    background-color: $color-rock;
+}
+.btn-paper {
+    background-color: $color-paper;
+}
+.btn-scissors {
+    background-color: $color-scissors;
+}
+
+.remis {
+    color: red;
+}
+
+.game-in {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.points {
+    border: 5px solid $color-frame;
+    background-color: $color-bg-3;
+    width: 150px;
+    height: 150px;
+    padding: 40px 30px 0px 30px;
+    font-size: 70px;
+    box-shadow: 0 8px 6px -6px black;
+}
+.buttons {
+    padding: 20px;
+    margin: 10px;
+}

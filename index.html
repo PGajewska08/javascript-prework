@@ -3,17 +3,51 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kurale&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cherry+Bomb+One&family=Kurale&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
-		<div id="buttons">
-			<button id="button-rock">Kamień</button>
-			<button id="button-paper">Papier</button>
-			<button id="button-scissors">Nożyce</button>
+		<div class="instruction">
+			<h1>Witaj w grze!</h1>
+			<p>
+				Twoim zadaniem jest zmierzyć się ze mną. <br>
+				Zasady są proste: <br>
+			</p>
+			<ul>
+				<li><span class="rock">Kamień</span> bije <span class="scissors">Nożyce</span></li>
+				<li><span class="paper">Papier</span> bije <span class="rock">Kamień</span></li>
+				<li><span class="scissors">Nożyce</span> biją <span class="paper">Papier</span></li>
+			</ul>
+			<h2>Gotowy?</h2>
 		</div>
-		<div id="messages"></div>
-	</div>
+		<div class="game">
+			<h3>Twój ruch:</h3>
+			<div class="game-in">
+				<div>
+					<h4>Gracz</h4>
+					<div class="points" id="points-player">pkt moje</div>
+				</div>
+				
+				<div>
+					<div class="buttons" id="buttons">
+						<button class="btn btn-rock" type="button" id="button-rock">Kamień</button>
+						<button class="btn btn-paper" type="button" id="button-paper">Papier</button>
+						<button class="btn btn-scissors" type="button" id="button-scissors">Nożyce</button>
+					</div>
+					<div class="msg" id="messages"></div>
+				</div>
+				<div>
+					<h4>Komputer</h4>
+					<div class="points" id="points-comp">pkt komp</div>
+				</div>
+			</div>
+			
+		</div>
+		</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
