@@ -1,27 +1,31 @@
-var ddd;
-ddd = document.getElementById('messages');
-ddd.innerHTML = 'Zaczynamy!';
+// Funkcja wypisująca wiadomość 
 function printMessage(msg){
-	var div = document.createElement('div');
+	const div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
 
+//Funkcja czyszcząca wiadomość
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
-var pointsPlayer, pointsComp, pointsPlayerBox, pointsCompBox;
-pointsPlayerBox = document.getElementById('points-player');
-pointsCompBox = document.getElementById('points-comp');
-pointsComp = 0;
-pointsPlayer = 0;
-function aktualizujWynik(){
+
+// stałe - pojemniki na punkty, zmienne - liczby punktów 
+const pointsPlayerBox = document.getElementById('points-player');
+const pointsCompBox = document.getElementById('points-comp');
+let pointsComp = 0;
+let pointsPlayer = 0;
+
+// Funkcja aktualizująca punkty na ekranie
+function updateResult(){
   pointsPlayerBox.innerHTML = pointsPlayer;
   pointsCompBox.innerHTML = pointsComp;
 }
-aktualizujWynik();
-var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput, pointsComp, pointsPlayer;
 
+// Zmienne - ruch kompuera, ruch gracza, liczba wylosowana
+let computerMove, playerMove, randomNumber;
+
+// Funkcja zwracająca nazwę rucnu ('kamień' / 'papier' / 'nożyce')
 function getMoveName(argMoveId) {
   if (argMoveId == 1) {
     return 'kamień';
@@ -32,27 +36,24 @@ function getMoveName(argMoveId) {
   else if (argMoveId == 3) {
 	return 'nożyce';
   }
-  else {
-    printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
-    return 'kamień';
-  }
 }
 
+// Funkcja wypisująca wynik - (wygrana / przegrana / remis)
 function displayResult(argPlayerMove, argComputerMove) {
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
     printMessage('Wygrywasz!');
     pointsPlayer += 1;
-    aktualizujWynik();
+    updateResult();
   }
   else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
 	  printMessage('Wygrywasz!');
     pointsPlayer += 1;
-    aktualizujWynik();
+    updateResult();
   } 
   else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
 	  printMessage('Wygrywasz!');
     pointsPlayer += 1;
-    aktualizujWynik();
+    updateResult();
   } 
   else if (argPlayerMove == argComputerMove) {
 	printMessage('Remis!');
@@ -60,19 +61,19 @@ function displayResult(argPlayerMove, argComputerMove) {
   else {
     printMessage('Przegrywasz :(');
     pointsComp += 1;
-    aktualizujWynik();
+    updateResult();
   }
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
-  console.log('Punkty komputera: '+pointsComp);
-  console.log('Punkty playera: '+ pointsPlayer);
+  console.log('Punkty komputera: ' + pointsComp);
+  console.log('Punkty playera: ' + pointsPlayer);
 }
 
-var buttonRock, buttonPaper, buttonScissors;
+// Stałe - przyciski
+const buttonRock = document.getElementById('button-rock');
+const buttonPaper = document.getElementById('button-paper');
+const buttonScissors = document.getElementById('button-scissors');
 
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
-
+// Funkcja - zdarzenia po wciśnięciu przycisku
 function buttonClicked(argButtonName){
   clearMessages();
   playerMove = argButtonName;
@@ -81,6 +82,7 @@ function buttonClicked(argButtonName){
   displayResult(playerMove, computerMove);
 }
 
+// Nasłuchiwanie przyciśnięcia przycisków
 buttonRock.addEventListener('click', function(){
     buttonClicked('kamień')
 });
